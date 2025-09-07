@@ -1,0 +1,16 @@
+services:
+  postgres: # serviço
+    image: postgres:latest # imagem e versão do postgre
+    container_name: postgres_bd_aula03 # nome do container
+    restart: always # reiniciar automaticamente
+    environment:
+      POSTGRES_DB: bd_aula03 # nome do banco de dados
+      POSTGRES_USER: user_rafa # usuário do banco de dados
+      POSTGRES_PASSWORD: Admin123 # senha do usuário
+    ports:
+      - "5435:5432" # porta do servidor
+    volumes:
+      - postgres_data:/var/lib/postgresql/data # diretório
+
+volumes:
+  postgres_data:

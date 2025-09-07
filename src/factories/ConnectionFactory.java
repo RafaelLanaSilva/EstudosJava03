@@ -7,8 +7,9 @@ public class ConnectionFactory {
 
 	public Connection getConnection() {
 		try {
-			var host = "jdbc:postgresql://localhost:5432/bd_aula03";
-			var user = "postgres";
+			//variáveis para conexão com o banco de dados
+			var host = "jdbc:postgresql://localhost:5435/bd_aula03";
+			var user = "user_rafa";
 			var pass = "Admin123";
 			
 			return DriverManager.getConnection(host, user, pass);				
